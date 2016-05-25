@@ -1,0 +1,503 @@
+makeBlock : function(){
+q = 4;
+cPudOut = 0;
+vPudOut = 0;
+this.block = this.blocks.create(3900, 415, 'cookie');
+this.block.body.allowGravity = false;
+this.block.body.immovable = true;
+this.block.body.moves = false;
+	for(i = 4000; i < 4800; i = i + 100){
+		this.block = this.blocks.create(i, 215, 'cookie');
+		this.block.body.allowGravity = false;
+		this.block.body.immovable = true;
+		this.block.body.moves = false;
+	}
+//this.cPudding.body.x = 718;
+//this.cPudding.body.y = 154;
+for(i = 3800; i >= 700; i = i - 100){
+		if(i == 700){
+			j = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+			if(j == 2){
+				this.block = this.blocks.create(i, 215, 'cookie');
+				this.block.body.allowGravity = false;
+				this.block.body.immovable = true;
+				this.block.body.moves = false;
+				this.blocky = this.blocks.create(i, 415, 'cookie');
+				this.blocky.body.allowGravity = false;
+				this.blocky.body.immovable = true;
+				this.blocky.body.moves = false;
+			/*	this.cPud = this.cPudding.create(718, 154, 'cPudding');	
+				this.cPud.body.allowGravity = false;
+				this.cPud.body.immovable = true;
+				this.cPud.body.moves = false;*/
+			/*	this.cPudding.x = i + 30;
+				this.cPudding.y = 354;*/
+				q = 2;
+			}
+			else if(j == 4 || j == 1 || j == 3){
+				this.blocky = this.blocks.create(i, 415, 'cookie');
+				this.blocky.body.allowGravity = false;
+				this.blocky.body.immovable = true;
+				this.blocky.body.moves = false;
+			/*	this.cPud = this.cPudding.create(718, 354, 'cPudding');	
+				this.cPud.body.allowGravity = false;
+				this.cPud.body.immovable = true;
+				this.cPud.body.moves = false;*/
+			/*	this.cPudding.x = i + 30;
+				this.cPudding.y = 354;*/
+				q = 4;
+			}
+		}
+		else{
+		/*	if( i < 3500 && i > 1000 && cPudOut == 0){
+				isOut = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+				if(isOut == 2){
+					isOut = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+					if(isOut == 1){
+						isOu = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+						if(isOu == 1){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;	
+					//		this.cPud = this.cPudding.create(i + 18, 154, 'cPudding');	
+						/*	this.cPudding.x = i + 30;
+							this.cPudding.y = 154;
+						}
+						else if (isOu == 2){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							this.blocky = this.blocks.create(i, 415, 'cookie');
+							this.blocky.body.allowGravity = false;
+							this.blocky.body.immovable = true;
+							this.blocky.body.moves = false;
+							/*this.cPudding.x = i + 30;
+							this.cPudding.y = 154;
+						}
+						q = 10;
+					}
+					else if(isOut == 2){
+						isOu = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+						if(isOu == 1){
+							this.block = this.blocks.create(i, 415, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							/*this.cPudding.x = i + 30;
+							this.cPudding.y = 354;
+							q = 11;
+						}
+						else if (isOu == 2){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							this.blocky = this.blocks.create(i, 415, 'cookie');
+							this.blocky.body.allowGravity = false;
+							this.blocky.body.immovable = true;
+							this.blocky.body.moves = false;
+							this.cPudding.x = i + 30;
+							this.cPudding.y = 154;
+							q = 11;
+						}
+						else if (isOu == 3){
+						/*	this.cPudding.x = i + 30;
+							this.cPudding.y = 415;
+							q = 11;
+						}
+						else if (isOu == 4){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+					/*		this.cPudding.x = i + 30;
+							this.cPudding.y = 415;	
+							q = 12;
+						}
+					}
+					cPudOut = 1;
+				}
+			}*/
+			if(q == 10){
+				j = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+				 if(j == 1){
+					this.cubey = this.cubes.create(i + 5, 130, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = 8;
+				}
+				else if (j == 2){
+					this.cubey = this.cubes.create(i + 5, 130, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = 9;
+				}
+			}
+			else if (q == 11){
+				j = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+				if(j == 1){
+					this.cubey = this.cubes.create(i + 5, 422, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					q = 5;
+				}
+				else if(j == 2){
+					this.cubey = this.cubes.create(i + 5, 422, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.cubey = this.cubes.create(i + 5, 332, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					q = 6;
+				}
+				else if(j == 3){
+					this.cubey = this.cubes.create(i + 5, 330, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.blocky = this.blocks.create(i, 415, 'cookie');
+					this.blocky.body.allowGravity = false;
+					this.blocky.body.immovable = true;
+					this.blocky.body.moves = false;
+					q = 7;
+				}
+			}
+			else if (q == 12){
+				this.cubey = this.cubes.create(i + 5, 422, 'jello');
+				this.cubey.body.allowGravity = false;
+				this.cubey.body.immovable = true;
+				this.cubey.body.moves = false;
+				this.cubey.alpha = .8;
+				q = 5;
+			}
+			else if(q == 5 || q == 6 || q == 7 || q == 8 || q == 9){
+				if(q == 7 || q == 6){
+						this.block = this.blocks.create(i, 415, 'cookie');
+						this.block.body.allowGravity = false;
+						this.block.body.immovable = true;
+						this.block.body.moves = false;
+						q = 4;
+				}
+				else{
+					j = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+					if(j == 2){
+						this.block = this.blocks.create(i, 215, 'cookie');
+						this.block.body.allowGravity = false;
+						this.block.body.immovable = true;
+						this.block.body.moves = false;
+						this.blocky = this.blocks.create(i, 415, 'cookie');
+						this.blocky.body.allowGravity = false;
+						this.blocky.body.immovable = true;
+						this.blocky.body.moves = false;
+						q = j;
+					}
+					else if (j == 3){
+						this.block = this.blocks.create(i, 215, 'cookie');
+						this.block.body.allowGravity = false;
+						this.block.body.immovable = true;
+						this.block.body.moves = false;
+						q = j;
+					}
+					else if(j == 4){
+						this.blocky = this.blocks.create(i, 415, 'cookie');
+						this.blocky.body.allowGravity = false;
+						this.blocky.body.immovable = true;
+						this.blocky.body.moves = false;
+						q = j;
+					}
+				}
+			}
+			else if(q == 2 || q == 3){
+				j = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+				if(j == 2 || j == 10){
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					this.blocky = this.blocks.create(i, 415, 'cookie');
+					this.blocky.body.allowGravity = false;
+					this.blocky.body.immovable = true;
+					this.blocky.body.moves = false;
+					q = j;
+				}
+				else if (j == 3){
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = j;
+				}
+				else if(j == 4 || j == 8 || j == 9){
+					this.blocky = this.blocks.create(i, 415, 'cookie');
+					this.blocky.body.allowGravity = false;
+					this.blocky.body.immovable = true;
+					this.blocky.body.moves = false;
+					q = j;
+				}
+				else if(j == 5){
+					this.cubey = this.cubes.create(i + 5, 422, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					q = j;
+				}
+				else if(j == 6){
+					this.cubey = this.cubes.create(i + 5, 130, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = 8;
+				}
+				else if (j == 7){
+					this.cubey = this.cubes.create(i + 5, 130, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = 9;
+				}
+			}
+			else{
+				j = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+				if(j == 2){
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					this.blocky = this.blocks.create(i, 415, 'cookie');
+					this.blocky.body.allowGravity = false;
+					this.blocky.body.immovable = true;
+					this.blocky.body.moves = false;
+					q = j;
+				}
+				else if (j == 3){
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = j;
+				}
+				else if(j == 4){
+					this.blocky = this.blocks.create(i, 415, 'cookie');
+					this.blocky.body.allowGravity = false;
+					this.blocky.body.immovable = true;
+					this.blocky.body.moves = false;
+					q = j;
+				}
+				else if(j == 5){
+					this.cubey = this.cubes.create(i + 5, 422, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					q = j;
+				}
+				else if(j == 6){
+					this.cubey = this.cubes.create(i + 5, 422, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.cubey = this.cubes.create(i + 5, 332, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					q = j;
+				}
+				else if(j == 7){
+					this.cubey = this.cubes.create(i + 5, 330, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.blocky = this.cubes.create(i, 415, 'cookie');
+					this.blocky.body.allowGravity = false;
+					this.blocky.body.immovable = true;
+					this.blocky.body.moves = false;
+					q = j;
+				}
+				else if(j == 8){
+					this.cubey = this.cubes.create(i + 5, 130, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = 8;
+				}
+				else if (j == 9){
+					this.cubey = this.cubes.create(i + 5, 130, 'jello');
+					this.cubey.body.allowGravity = false;
+					this.cubey.body.immovable = true;
+					this.cubey.body.moves = false;
+					this.cubey.alpha = .8;
+					this.block = this.blocks.create(i, 215, 'cookie');
+					this.block.body.allowGravity = false;
+					this.block.body.immovable = true;
+					this.block.body.moves = false;
+					q = 9;
+				}
+			}
+		}
+	}
+},
+
+if(i < 3500 && i > 1000 && (cPudOut == 0 || vPudOut == 0)){
+			//	which = 0;
+				isOut = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+				if(isOut == 2){
+					if(cPudOut == 1){
+						which = 1;
+						vPudOut = 1;
+					}
+					else if(vPudOut == 1){
+						which = 2;
+						cPudOut = 1;
+					}
+					else{
+						which = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+						if(which == 1){
+							vPudOut = 1;
+						}
+						else if(which == 2){
+							cPudOut = 1;
+						}
+					}
+					isOut = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+					if(isOut == 1){
+						isOu = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+						if(isOu == 1){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;	
+					//		this.cPud = this.cPudding.create(i + 18, 154, 'cPudding');	
+							if(which == 2){
+								this.cPudding.x = i + 30;
+								this.cPudding.y = 154;
+							}
+							else if(which == 1){
+								this.vPudding.x = i + 30;
+								this.vPudding.y = 154;
+							}
+						}
+						else if (isOu == 2){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							this.blocky = this.blocks.create(i, 415, 'cookie');
+							this.blocky.body.allowGravity = false;
+							this.blocky.body.immovable = true;
+							this.blocky.body.moves = false;
+							if(which == 2){
+								this.cPudding.x = i + 30;
+								this.cPudding.y = 154;
+							}
+							else if(which == 1){
+								this.vPudding.x = i + 30;
+								this.vPudding.y = 154;
+							}
+						}
+						q = 10;
+					}
+					else if(isOut == 2){
+						isOu = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+						if(isOu == 1){
+							this.block = this.blocks.create(i, 415, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							if(which == 2){
+								this.cPudding.x = i + 30;
+								this.cPudding.y = 354;
+							}
+							else if(which == 1){
+								this.vPudding.x = i + 30;
+								this.vPudding.y = 354;
+							}
+							q = 11;
+						}
+						else if (isOu == 2){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							this.blocky = this.blocks.create(i, 415, 'cookie');
+							this.blocky.body.allowGravity = false;
+							this.blocky.body.immovable = true;
+							this.blocky.body.moves = false;
+							if(which == 2){
+								this.cPudding.x = i + 30;
+								this.cPudding.y = 154;
+							}
+							else if(which == 1){
+								this.vPudding.x = i + 30;
+								this.vPudding.y = 154;
+							}
+							q = 11;
+						}
+						else if (isOu == 3){
+							if(which == 2){
+								this.cPudding.x = i + 30;
+								this.cPudding.y = 415;
+							}
+							else if(which == 1){
+								this.vPudding.x = i + 30;
+								this.vPudding.y = 415;
+							}
+							q = 11;
+						}
+						else if (isOu == 4){
+							this.block = this.blocks.create(i, 215, 'cookie');
+							this.block.body.allowGravity = false;
+							this.block.body.immovable = true;
+							this.block.body.moves = false;
+							if(which == 2){
+								this.cPudding.x = i + 30;
+								this.cPudding.y = 415;
+							}
+							else if(which == 1){
+								this.vPudding.x = i + 30;
+								this.vPudding.y = 415;
+							}
+							q = 12;
+						}
+					}
+				}
+			}
